@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prguzzi-cmyk.github.io/resprousa-com/sitemap.xml
