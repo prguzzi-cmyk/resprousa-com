@@ -189,3 +189,47 @@ img{max-width:100%;display:block}
   .footer__inner{grid-template-columns:1fr}
   .topbar__inner{font-size:12px}
 }
+
+/* ============================================================
+   CORPORATE EXPANSION — network, partner, commercial split
+   ============================================================ */
+
+/* Residential / Commercial split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:48px}
+.split__card{position:relative;border-radius:var(--r-lg);padding:44px 38px;color:#fff;overflow:hidden;min-height:280px;display:flex;flex-direction:column;justify-content:flex-end}
+.split__card--res{background:linear-gradient(160deg,var(--navy-2),var(--navy-3) 60%,#1A4A57)}
+.split__card--com{background:linear-gradient(160deg,#123028,#14543F 70%,#186349)}
+.split__card::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 85% 15%,rgba(22,179,166,.25),transparent 65%)}
+.split__card h3{font-family:'Barlow',sans-serif;font-size:28px;font-weight:800;position:relative;margin-bottom:8px}
+.split__card p{position:relative;color:#C4D7DE;font-size:15px;max-width:420px;margin-bottom:20px}
+.split__badge{position:absolute;top:26px;left:38px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--teal);z-index:1}
+
+/* Network structure */
+.network{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+.net{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:32px 28px;position:relative}
+.net__role{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-deep);font-weight:800}
+.net h3{font-family:'Barlow',sans-serif;font-size:22px;font-weight:800;color:var(--navy);margin:8px 0 10px}
+.net p{color:var(--muted);font-size:14.5px}
+.net__num{position:absolute;top:22px;right:26px;font-family:'Barlow',sans-serif;font-weight:800;font-size:44px;color:rgba(22,179,166,.14);line-height:1}
+
+/* Locally owned strip */
+.strip{background:var(--navy);color:#fff;border-radius:var(--r-lg);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:56px;flex-wrap:wrap;box-shadow:var(--shadow)}
+.strip h3{font-family:'Barlow',sans-serif;font-size:clamp(20px,2.6vw,28px);font-weight:800}
+.strip p{color:#A9BEC7;font-size:15px;max-width:560px}
+
+/* Partner section */
+.partner{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;margin-top:52px}
+.partner__points{list-style:none;display:flex;flex-direction:column;gap:16px;margin-top:26px}
+.partner__points li{display:flex;gap:14px;align-items:flex-start;font-size:15px;color:#C4D7DE}
+.partner__points .pip{width:26px;height:26px;border-radius:8px;background:rgba(22,179,166,.2);color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;flex-shrink:0;margin-top:1px}
+.partner__points strong{color:#fff}
+.partner__card{background:var(--white);color:var(--ink);border-radius:var(--r-lg);padding:36px;box-shadow:var(--shadow)}
+.partner__card h3{font-family:'Barlow',sans-serif;font-size:22px;font-weight:800;color:var(--navy);margin-bottom:6px}
+.partner__card>p{color:var(--muted);font-size:14px;margin-bottom:18px}
+
+@media(max-width:960px){
+  .split{grid-template-columns:1fr}
+  .network{grid-template-columns:1fr}
+  .partner{grid-template-columns:1fr}
+  .strip{flex-direction:column;text-align:center}
+}
