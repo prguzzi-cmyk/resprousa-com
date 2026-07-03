@@ -20,11 +20,24 @@ const CONFIG = {
     el.addEventListener("click", function () { track(el.getAttribute("data-analytics")); });
   });
 
+  // Build Back meter — animate when scrolled into view
+  var meter = document.querySelector("[data-meter]");
+  if (meter && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { meter.classList.add("is-live"); obs.disconnect(); }
+      });
+    }, { threshold: 0.4 }).observe(meter);
+  } else if (meter) {
+    meter.classList.add("is-live");
+  }
+
   // form submission → FormSubmit AJAX endpoint
   var SUBJECTS = {
     "service-request": "Respro website — Service Request",
     "partner-inquiry": "Respro website — Partner Inquiry",
     "operator-inquiry": "Respro website — Territory / Operator Inquiry",
+    "upasign-resend": "Respro website — UPASign: resend my agreement link",
   };
 
   document.querySelectorAll("form[data-form]").forEach(function (form) {

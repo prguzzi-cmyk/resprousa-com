@@ -233,3 +233,73 @@ img{max-width:100%;display:block}
   .partner{grid-template-columns:1fr}
   .strip{flex-direction:column;text-align:center}
 }
+
+/* ============================================================
+   BUILD BACK™ + UPASIGN™
+   ============================================================ */
+
+/* ---------- Build Back band ---------- */
+.kicker--amber{color:var(--amber)}
+.buildback{position:relative;overflow:hidden}
+.buildback::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(60% 50% at 88% 12%,rgba(255,176,32,.12),transparent 60%),
+  radial-gradient(45% 40% at 8% 92%,rgba(22,179,166,.10),transparent 65%)}
+.buildback .container{position:relative}
+.bb__title em{font-style:normal;color:var(--amber)}
+.bb__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:54px}
+.bb{background:rgba(255,255,255,.045);border:1px solid var(--line-dark);border-radius:var(--r-lg);padding:30px 26px;transition:transform .18s,border-color .2s,background .2s}
+.bb:hover{transform:translateY(-5px);border-color:rgba(255,176,32,.5);background:rgba(255,255,255,.07)}
+.bb__icon{width:52px;height:52px;border-radius:14px;background:rgba(255,176,32,.14);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+.bb h3{font-family:'Barlow',sans-serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:8px}
+.bb p{color:#A9BEC7;font-size:14.5px}
+.bb__cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:44px}
+
+/* Damage → Better meter */
+.bbmeter{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;position:relative}
+.bbmeter::before{content:"";position:absolute;top:11px;left:12.5%;right:12.5%;height:2px;background:rgba(255,255,255,.14)}
+.bbmeter::after{content:"";position:absolute;top:11px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,var(--teal),var(--amber));transform:scaleX(0);transform-origin:left;transition:transform 2s cubic-bezier(.4,0,.2,1) .2s}
+.bbmeter.is-live::after{transform:scaleX(1)}
+.bbm{text-align:center;position:relative;padding:0 10px}
+.bbm__dot{width:24px;height:24px;border-radius:50%;border:2px solid #3A5563;background:var(--navy-2);margin:0 auto 14px;position:relative;z-index:1;transition:background .4s,border-color .4s,box-shadow .4s}
+.is-live .bbm:nth-child(1) .bbm__dot{transition-delay:.25s}
+.is-live .bbm:nth-child(2) .bbm__dot{transition-delay:.8s}
+.is-live .bbm:nth-child(3) .bbm__dot{transition-delay:1.4s}
+.is-live .bbm:nth-child(4) .bbm__dot{transition-delay:2s}
+.is-live .bbm__dot{background:var(--teal);border-color:var(--teal);box-shadow:0 0 16px rgba(22,179,166,.6)}
+.is-live .bbm--final .bbm__dot{background:var(--amber);border-color:var(--amber);box-shadow:0 0 26px rgba(255,176,32,.85)}
+.bbm strong{display:block;font-family:'Barlow',sans-serif;font-size:15.5px;font-weight:700;color:#fff;letter-spacing:.02em}
+.bbm span{font-size:12.5px;color:#8FA9B4}
+.bbm--final strong{color:var(--amber)}
+
+/* ---------- UPASign hero ---------- */
+.uphero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.uphero__grid .hero__inner{max-width:none}
+.updoc-wrap{position:relative;display:flex;justify-content:center;padding:40px 0}
+.updoc{background:#fff;border-radius:18px;padding:30px 30px 24px;box-shadow:var(--shadow);width:min(430px,100%);color:var(--ink);position:relative;transform:rotate(-1.6deg)}
+.updoc__head{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.updoc__title{font-family:'Barlow',sans-serif;font-weight:800;font-size:15px;color:var(--navy);letter-spacing:.04em}
+.updoc__badge{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-deep);background:var(--teal-soft);padding:4px 10px;border-radius:999px}
+.updoc__line{height:9px;border-radius:5px;background:#E7EEF1;margin-bottom:11px}
+.updoc__line--w80{width:80%}.updoc__line--w95{width:95%}.updoc__line--w60{width:60%}.updoc__line--w88{width:88%}
+.updoc__siglabel{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);font-weight:700;margin:22px 0 2px}
+.updoc__sig{border-bottom:2px solid var(--line);padding-bottom:2px}
+.updoc__sig svg{display:block;width:210px;height:56px}
+.updoc__sig path{stroke:#14303F;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:520;stroke-dashoffset:520;animation:updoc-sign 2s ease .9s forwards}
+@keyframes updoc-sign{to{stroke-dashoffset:0}}
+.updoc__stamp{position:absolute;top:34%;right:-18px;border:3px solid var(--teal);color:var(--teal-deep);font-family:'Barlow',sans-serif;font-weight:800;font-size:17px;letter-spacing:.18em;padding:8px 18px;border-radius:10px;background:rgba(255,255,255,.92);transform:rotate(8deg) scale(1.6);opacity:0;animation:updoc-stamp .45s cubic-bezier(.2,1.6,.4,1) 3.1s forwards}
+@keyframes updoc-stamp{to{opacity:1;transform:rotate(8deg) scale(1)}}
+.updoc__audit{display:flex;align-items:center;gap:8px;margin-top:18px;font-size:11.5px;color:var(--faint);font-weight:600}
+.updoc__audit .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);display:inline-block;box-shadow:0 0 8px var(--teal);animation:pulse 2.2s infinite}
+
+@media(max-width:960px){
+  .bb__grid{grid-template-columns:repeat(2,1fr)}
+  .uphero__grid{grid-template-columns:1fr}
+  .updoc-wrap{padding:8px 0 16px}
+}
+@media(max-width:640px){
+  .bb__grid{grid-template-columns:1fr}
+  .bbmeter{grid-template-columns:repeat(2,1fr);gap:26px 0}
+  .bbmeter::before,.bbmeter::after{display:none}
+  .updoc{transform:none}
+  .updoc__stamp{right:6px}
+}
