@@ -1,0 +1,11 @@
+# DNS backup for resprousa.com — taken 2026-07-03 from Mac mini, BEFORE pointing A/www at GitHub Pages
+
+resprousa.com.		14400	IN	A	192.185.41.238
+www.resprousa.com.	14400	IN	CNAME	resprousa.com.
+resprousa.com.		14400	IN	MX	0 resprousa-com.mail.protection.outlook.com.
+resprousa.com.		14400	IN	TXT	"MS=ms68995299"
+resprousa.com.		14400	IN	TXT	"v=spf1 include:spf.protection.outlook.com -all"
+resprousa.com.		14400	IN	A	192.185.41.238
+autodiscover.resprousa.com. 14400 IN	CNAME	autodiscover.outlook.com.
+ns8220.hostgator.com.
+ns8219.hostgator.com.
